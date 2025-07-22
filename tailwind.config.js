@@ -3,6 +3,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Baby Boy Theme Colors
+        babyBlue: {
+          50: '#f0f8ff',
+          100: '#e1f3ff',
+          200: '#c3e7ff',
+          300: '#a5dbff',
+          400: '#87cfff',
+          500: '#69c3ff',
+          600: '#4bb7ff',
+          700: '#2dabff',
+          800: '#0f9fff',
+          900: '#0093f0',
+        },
+        blushPink: {
+          50: '#fdf2f8',
+          100: '#fce7f3',
+          200: '#fbcfe8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
+          800: '#9d174d',
+          900: '#831843',
+        },
+        navySlate: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+        },
+        // Keep old colors for backward compatibility
         powderedblue: {
           50: '#f3fbfc',
           100: '#e0f7fa',

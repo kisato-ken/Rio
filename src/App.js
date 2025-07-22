@@ -6,46 +6,48 @@ export default function AnnaprashanInvite() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-powderedblue-100 to-powderedblue-300 p-2 md:p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-babyBlue-50 via-white to-blushPink-50 p-2 md:p-4">
       {!isOpen && (
         <motion.button
-          className="bg-white/80 shadow-2xl rounded-2xl p-6 md:p-8 flex flex-col items-center cursor-pointer relative w-full max-w-xs h-[340px] md:w-[320px] md:h-[400px] border-2 border-powderedblue-200 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-powderedblue-300"
+          className="bg-white shadow-2xl rounded-2xl p-6 md:p-8 flex flex-col items-center cursor-pointer relative w-full max-w-xs h-[340px] md:w-[320px] md:h-[400px] border-2 border-babyBlue-200 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blushPink-200"
           onClick={() => setIsOpen(true)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           aria-label="Open Invitation"
         >
-          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-powderedblue-400 mb-4 shadow-lg">
+          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blushPink-300 mb-4 shadow-lg">
             <img
               src="/rio.jpg"
               alt="Shaurya smiling, ready for Annaprashan"
               className="object-cover w-full h-full"
             />
           </div>
-          <span className="text-2xl font-bold text-powderedblue-700 mb-2">অন্নপ্রাশন</span>
-          <span className="text-lg text-powderedblue-700 font-semibold flex items-center gap-2"><FaGift className="text-powderedblue-400" /> Tap to Open Invitation</span>
+          <span className="text-2xl font-bold text-blushPink-600 mb-2">অন্নপ্রাশন</span>
+          <span className="text-lg text-navySlate-700 font-semibold flex items-center gap-2"><FaGift className="text-blushPink-400" /> Tap to Open Invitation</span>
         </motion.button>
       )}
       {isOpen && (
         <motion.div
           className="relative w-full max-w-6xl mx-auto flex flex-col md:flex-row items-stretch justify-center shadow-2xl rounded-3xl overflow-hidden"
-          style={{ minHeight: 0, height: 'auto', background: 'rgba(255,255,255,0.7)' }}
+          style={{ minHeight: 0, height: 'auto', background: 'rgba(255,255,255,0.95)' }}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7 }}
         >
           {/* Left Page: Poem (Bengali & English, two columns) */}
-          <div className="relative w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-8 bg-white/80 min-h-[350px]" style={{ borderRight: '2px solid #b0e0e6' }}>
-            <img
-              src="/rio-background.jpg"
-              alt="Background of Rio"
-              className="absolute inset-0 w-full h-full object-cover scale-110 z-0"
-              style={{ filter: 'blur(3px) brightness(0.85)' }}
-            />
-            <div className="relative z-10 w-full flex flex-col md:flex-row gap-4 md:gap-8">
+          <div className="relative w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-8 bg-white min-h-[350px]" style={{ borderRight: '2px solid #c3e7ff' }}>
+            {/* Circular photo at center */}
+            <div className="z-10 w-40 h-40 md:w-60 md:h-60 rounded-full overflow-hidden mx-auto mb-6">
+              <img
+                src="/rio-background.jpg"
+                alt="Rio"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="relative z-10 w-full flex flex-row gap-4">
               {/* Bengali Poem */}
               <div className="flex-1 flex flex-col justify-center pr-0 md:pr-4 mb-4 md:mb-0">
-                <div className="whitespace-pre-line text-sm md:text-lg text-white leading-relaxed font-medium text-left">
+                <div className="whitespace-pre-line text-sm md:text-lg text-navySlate-800 leading-relaxed font-medium text-left">
 রোজ দেখি তোমরা সবাই
 খাচ্ছো বসে ভাত!
 আমারও তো ইচ্ছে করে
@@ -66,14 +68,14 @@ export default function AnnaprashanInvite() {
 তাই তো চিঠি পাঠিয়ে দিলাম—
 কেউ করোনা আড়ি!!
 
-<span className='block mt-4 text-xs md:text-base text-powderedblue-600 font-semibold'>ইতি, রিও</span>
+<span className='block mt-4 text-xs md:text-base text-blushPink-600 font-semibold'>ইতি, রিও</span>
                 </div>
               </div>
               {/* Divider */}
-              <div className="hidden md:block w-px bg-powderedblue-200 mx-4" />
+              <div className="w-px bg-babyBlue-200 mx-4" />
               {/* English Poem */}
               <div className="flex-1 flex flex-col justify-center pl-0 md:pl-4">
-                <div className="whitespace-pre-line text-sm md:text-lg text-white leading-relaxed italic text-left">
+                <div className="whitespace-pre-line text-sm md:text-lg text-navySlate-700 leading-relaxed italic text-left">
 Roj dekhi tomra shobai,
 Khaccho boshe bhaat!
 Amaro toh icche kore
@@ -95,37 +97,39 @@ Cholte ki pari?
 Tai to chithi pathiye dilam—
 Keo korona aari!!
 
-<span className='block mt-4 text-xs md:text-base text-powderedblue-600 font-semibold not-italic'>Love, Rio</span>
+<span className='block mt-4 text-xs md:text-base text-blushPink-600 font-semibold not-italic'>Love, Rio</span>
                 </div>
               </div>
             </div>
           </div>
           {/* Right Page: Invitation */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-0 bg-powderedblue-100/90 relative min-h-[350px]">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-0 bg-gradient-to-br from-white via-blushPink-50 to-blushPink-100 relative min-h-[350px]">
             {/* Floral decorations */}
             <img src="/flowers.png" alt="flowers" className="absolute left-0 top-0 w-24 md:w-40 lg:w-56 -translate-y-1/4 -translate-x-1/4 select-none pointer-events-none" style={{zIndex:2}} />
             <img src="/flowers.png" alt="flowers" className="absolute right-0 bottom-0 w-24 md:w-40 lg:w-56 rotate-180 translate-y-1/4 translate-x-1/4 select-none pointer-events-none" style={{zIndex:2}} />
+            {/* Soft gold glow overlay for extra vibrance */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-blushPink-50/60 to-blushPink-100/50 pointer-events-none" style={{zIndex:1}} />
             {/* Gold geometric frame */}
             <div className="relative w-full h-full flex flex-col justify-center items-center p-4 md:p-12" style={{zIndex:3}}>
               <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0 w-full h-full pointer-events-none" style={{zIndex:1}}>
-                <polygon points="30,40 370,20 390,480 60,500" stroke="#C9A646" strokeWidth="5" fill="none" />
+                <polygon points="30,40 370,20 390,480 60,500" stroke="#ec4899" strokeWidth="3" fill="none" />
               </svg>
-              <div className="relative z-10 w-full max-w-xs md:max-w-lg mx-auto bg-white/90 rounded-2xl shadow-xl p-4 md:p-8 flex flex-col items-center" style={{boxShadow:'0 4px 32px 0 rgba(0,0,0,0.08)'}}>
-                <div className="text-base md:text-lg text-center text-gray-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
-                  Our baby boy <span className="font-bold">Shaurya (Rio)</span> is ready for his first taste of rice!!
+              <div className="relative z-10 w-full max-w-xs md:max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-4 md:p-8 flex flex-col items-center border-2 border-blushPink-200" style={{boxShadow:'0 0 32px 8px rgba(236,72,153,0.15), 0 8px 40px 0 rgba(236,72,153,0.08), 0 4px 32px 0 rgba(0,0,0,0.06)'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                  Our baby boy <span className="font-bold text-blushPink-600">Shaurya (Rio)</span> is ready for his first taste of rice!!
                 </div>
-                <div className="text-base md:text-lg text-center text-gray-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
-                  It is our pleasure to invite you on this auspicious occasion of our son’s Annaprashan Ceremony
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                  It is our pleasure to invite you on this auspicious occasion of our son's Annaprashan Ceremony
                 </div>
-                <div className="text-base md:text-lg text-center text-gray-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
                   Please join us on—<br/>
-                  <span className="font-bold">Sunday, August 03</span><br/>
-                  <span className="font-bold">12.30 pm onwards</span>
+                  <span className="font-bold text-blushPink-600">Sunday, August 03</span><br/>
+                  <span className="font-bold text-blushPink-600">12.30 pm onwards</span>
                 </div>
-                <div className="text-base md:text-lg text-center text-gray-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
                   1453 Hilltown Dr<br/>Frisco TX 75036
                 </div>
-                <div className="text-base md:text-lg text-center text-gray-500 mt-2" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-600 mt-2" style={{fontFamily: 'Playfair Display, serif'}}>
                   Regards,<br/>Sukanya & Debanka
                 </div>
               </div>

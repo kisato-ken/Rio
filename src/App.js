@@ -55,7 +55,7 @@ export default function AnnaprashanInvite() {
           transition={{ duration: 0.7 }}
         >
           {/* Left Page: Poem (Bengali & English, two columns) */}
-          <div className="relative w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-8 bg-gradient-to-br from-white via-powderedblue-50 to-powderedblue-100 shadow-2xl rounded-3xl border-2 border-powderedblue-200 min-h-[350px] overflow-y-auto no-scrollbar">
+          <div className="relative w-full md:w-1/2 flex flex-col items-center justify-center p-2 md:p-6 bg-gradient-to-br from-white via-powderedblue-50 to-powderedblue-100 shadow-md rounded-3xl border-2 border-powderedblue-200 min-h-[300px]">
             {/* Floral decorations */}
             <img src="/flowers.png" alt="flowers" className="absolute left-0 top-0 w-32 md:w-48 lg:w-64 -translate-x-1/3 -translate-y-1/3 select-none pointer-events-none" style={{ zIndex: 2 }} />
             <img src="/flowers.png" alt="flowers" className="absolute right-0 bottom-0 w-32 md:w-48 lg:w-64 rotate-180 translate-x-1/3 translate-y-1/3 select-none pointer-events-none" style={{ zIndex: 2 }} />
@@ -67,9 +67,9 @@ export default function AnnaprashanInvite() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="relative z-10 w-full flex flex-row flex-nowrap gap-4 md:gap-8">
+            <div className="relative z-10 w-full flex flex-row flex-nowrap gap-0">
               {/* Bengali Poem */}
-              <div className="flex-1 text-left font-mono text-sm md:text-lg leading-relaxed whitespace-pre space-y-2 pr-0 md:pr-4 mb-4 md:mb-0">
+              <div className="w-1/2 text-left font-mono text-xs md:text-base leading-snug whitespace-pre space-y-1 pr-0 md:pr-4 mb-4 md:mb-0">
                 <p>রোজ দেখি তোমরা সবাই</p>
                 <p>খাচ্ছো বসে ভাত!</p>
                 <p>আমারও তো ইচ্ছে করে</p>
@@ -86,13 +86,13 @@ export default function AnnaprashanInvite() {
                 <p>চলতে কি আর পারি;</p>
                 <p>তাই তো চিঠি পাঠিয়ে দিলাম—</p>
                 <p>কেউ করোনা আড়ি!!</p>
-                <p className="mt-4 text-xs md:text-base font-bold text-red-600">ইতি——</p>
+                <p className="mt-4 text-xs md:text-base font-bold text-red-600">ইতি—</p>
                 <p className="text-xs md:text-base font-bold text-red-600">রিও 💙</p>
               </div>
               {/* Divider */}
               <div className="block w-px bg-babyBlue-200 mx-4 h-full" />
               {/* English Poem */}
-              <div className="flex-1 text-left font-mono text-sm md:text-lg italic leading-relaxed whitespace-pre space-y-2 pl-0 md:pl-4">
+              <div className="w-4/12 text-left font-mono text-xs md:text-sm italic leading-snug whitespace-pre space-y-1 pl-0 md:pl-1">
                 <p>Roj dekhi tomra shobai,</p>
                 <p>Khaccho boshe bhaat!</p>
                 <p>Amaro toh icche kore—</p>

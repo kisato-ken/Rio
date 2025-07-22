@@ -90,7 +90,7 @@ export default function AnnaprashanInvite() {
                 <p className="text-xs md:text-base font-bold text-red-600">রিও 💙</p>
               </div>
               {/* Divider */}
-              <div className="block w-px bg-babyBlue-200 mx-4 h-full" />
+              <div className="block w-px bg-babyBlue-200 mx-1 h-full" />
               {/* English Poem */}
               <div className="w-4/12 text-left font-mono text-xs md:text-sm italic leading-snug whitespace-pre space-y-1 pl-0 md:pl-1">
                 <p>Roj dekhi tomra shobai,</p>

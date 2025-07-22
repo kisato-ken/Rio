@@ -9,28 +9,40 @@ export default function AnnaprashanInvite() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-babyBlue-50 via-white to-blushPink-50 p-2 md:p-4">
       {!isOpen && (
         <motion.button
-          className="bg-white shadow-2xl rounded-2xl p-6 md:p-8 flex flex-col items-center cursor-pointer relative w-full max-w-xs h-[340px] md:w-[320px] md:h-[400px] border-2 border-babyBlue-200 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blushPink-200"
+          className="bg-white shadow-2xl rounded-2xl p-6 md:p-8 flex flex-col justify-center items-center cursor-pointer relative w-full max-w-sm h-[380px] md:w-[360px] md:h-[440px] border-2 border-babyBlue-200 hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blushPink-200"
           onClick={() => setIsOpen(true)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           aria-label="Open Invitation"
         >
-          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-babyBlue-300 mb-4 shadow-lg">
-            <img
-              src="/rio.jpg"
-              alt="Shaurya smiling, ready for Annaprashan"
-              className="object-cover w-full h-full"
-            />
+          {/* Blurred Swastik watermark */}
+  <img
+    src="/swastik.png"
+    alt="Swastik watermark"
+    className="absolute inset-0 w-full h-full object-cover opacity-10 filter blur-sm transform scale-150 pointer-events-none z-0"
+          />
+          {/* Circular photo container centered on watermark */}
+  <div className="relative z-10 w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-babyBlue-300 shadow-lg">
+    <img
+      src="/rio.jpg"
+      alt="Rio"
+      className="object-cover w-full h-full"
+    />
+  </div>
+          {/* Animated title: word-by-word fade-in */}
+          <div className="flex flex-nowrap justify-center gap-1 mt-8 mb-4 px-2 overflow-hidden">
+            {["Welcome", "To", "Shaurya's", "Annaprashan"].map((word, idx) => (
+              <motion.span
+                key={idx}
+                className="text-base md:text-lg font-bold text-babyBlue-600 whitespace-nowrap"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: (idx + 1) * 0.8, duration: 0.8 }}
+              >
+                {word}
+              </motion.span>
+            ))}
           </div>
-          {/* Animated title */}
-          <motion.span
-            className="text-2xl font-bold text-babyBlue-600 mb-4 text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' }}
-          >
-            Welcome To Shaurya's Annaprashan
-          </motion.span>
           <span className="text-lg text-navySlate-700 font-semibold flex items-center gap-2"><FaGift className="text-babyBlue-400" /> Tap to Open Invitation</span>
         </motion.button>
       )}

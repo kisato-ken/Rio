@@ -24,10 +24,10 @@ export default function AnnaprashanInvite() {
           </div>
           {/* Animated title */}
           <motion.span
-            className="text-2xl font-bold text-babyBlue-600 mb-2"
+            className="text-2xl font-bold text-babyBlue-600 mb-4 text-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+            transition={{ duration: 2, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse' }}
           >
             Welcome To Shaurya's Annaprashan
           </motion.span>

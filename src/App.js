@@ -15,15 +15,23 @@ export default function AnnaprashanInvite() {
           whileTap={{ scale: 0.97 }}
           aria-label="Open Invitation"
         >
-          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blushPink-300 mb-4 shadow-lg">
+          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-babyBlue-300 mb-4 shadow-lg">
             <img
               src="/rio.jpg"
               alt="Shaurya smiling, ready for Annaprashan"
               className="object-cover w-full h-full"
             />
           </div>
-          <span className="text-2xl font-bold text-blushPink-600 mb-2">অন্নপ্রাশন</span>
-          <span className="text-lg text-navySlate-700 font-semibold flex items-center gap-2"><FaGift className="text-blushPink-400" /> Tap to Open Invitation</span>
+          {/* Animated title */}
+          <motion.span
+            className="text-2xl font-bold text-babyBlue-600 mb-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, repeat: Infinity, repeatType: 'reverse' }}
+          >
+            Welcome To Shaurya's Annaprashan
+          </motion.span>
+          <span className="text-lg text-navySlate-700 font-semibold flex items-center gap-2"><FaGift className="text-babyBlue-400" /> Tap to Open Invitation</span>
         </motion.button>
       )}
       {isOpen && (

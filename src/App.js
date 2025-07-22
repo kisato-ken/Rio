@@ -127,19 +127,20 @@ export default function AnnaprashanInvite() {
                 <polygon points="30,40 370,20 390,480 60,500" stroke="#4fb9cb" strokeWidth="3" fill="none" />
               </svg>
               <div className="relative z-10 w-full max-w-xs md:max-w-lg mx-auto bg-white rounded-2xl shadow-2xl p-4 md:p-8 flex flex-col items-center border-2 border-powderedblue-200" style={{boxShadow:"0 0 32px 8px rgba(79,185,203,0.15), 0 8px 40px 0 rgba(79,185,203,0.08), 0 4px 32px 0 rgba(0,0,0,0.06)"}}>
-                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
                   Our baby boy <span className="font-bold text-babyBlue-600">Shaurya (Rio)</span> is ready for his first taste of rice!!
                 </div>
-                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-2" style={{fontFamily: 'Playfair Display, serif'}}>
                   It is our pleasure to invite you on this auspicious occasion of our son's <span className="font-bold text-red-600">Annaprashan Ceremony</span>
                 </div>
-                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-0" style={{fontFamily: 'Playfair Display, serif'}}>
                   Please join us on—<br/>
                   <span className="font-bold text-red-600">Sunday, August 03</span><br/>
-                  <span className="font-bold text-red-600">12.30 pm onwards</span>
+                  <span className="font-bold text-red-600">12.30 pm onwards</span><br/>
+                  <span className="italic text-navySlate-700">at</span>
                 </div>
-                <div className="text-base md:text-lg text-center text-navySlate-700 mb-4" style={{fontFamily: 'Playfair Display, serif'}}>
-                  1453 Hilltown Dr<br/>Frisco TX 75036
+                <div className="text-base md:text-lg text-center text-navySlate-700 mb-0" style={{fontFamily: 'Playfair Display, serif'}}>
+                   1453 Hilltown Dr<br/>Frisco TX 75036
                 </div>
                 <div className="text-base md:text-lg text-center text-navySlate-600 mt-2" style={{fontFamily: 'Playfair Display, serif'}}>
                   Regards,<br/>Sukanya & Debanka
